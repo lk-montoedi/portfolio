@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lebone Montoedi - Dev</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-primary text-textPrimary font-mono">
+    <header class="fixed top-0 left-0 w-full z-50 px-8 py-4 transition-all duration-300 bg-transparent">
+      <nav class="flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold text-accent">LM</a>
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <!-- <li><a href="#certifications" class="nav-link">Certifications</a></li> -->
+          <li><a href="#experience" class="nav-link">Milestones</a></li>
+          <li><a href="#principles" class="nav-link">Principles</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#writing" class="nav-link">Blog</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-textPrimary" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          <svg id="x-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </nav>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-40" role="dialog" aria-modal="true">
+      <ul class="flex flex-col items-center justify-center h-full space-y-8">
+        <li><a href="#home" class="nav-link-mobile">Home</a></li>
+        <li><a href="#about" class="nav-link-mobile">About</a></li>
+        <!-- <li><a href="#certifications" class="nav-link-mobile">Certifications</a></li> -->
+        <li><a href="#experience" class="nav-link-mobile">Milestones</a></li>
+        <li><a href="#principles" class="nav-link-mobile">Principles</a></li>
+        <li><a href="#projects" class="nav-link-mobile">Projects</a></li>
+        <li><a href="#writing" class="nav-link-mobile">Blog</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section id="home" class="h-screen flex items-center justify-center text-center relative">
+        <picture class="absolute inset-0 w-full h-full">
+          <source media="(max-width: 768px)" srcset="/src/assets/hero-2-mobile.jpg" />
+          <img src="/src/assets/hero-2.jpg" alt="Portfolio hero image" class="w-full h-full object-cover" />
+        </picture>
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="z-10 text-white w-full max-w-4xl px-4">
+          <h1 class="text-5xl md:text-7xl font-bold mb-4">Hi, I'm <span class="highlight">Lebone</span></h1>
+          <p class="text-xl md:text-2xl mb-8">A <span class="highlight">Principled</span> Software Developer.</p>
+
+          <!-- NEW SWIPER CAROUSEL -->
+          <div class="swiper quote-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <p class="text-lg text-textSecondary">"Life is a game of binary choices. Yes and No. Not making a decision is a choice itself."</p>
+                <span class="text-accent mt-2">- Yours truly</span>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <p class="text-lg text-textSecondary">"Everything begins with belief. Envision it first to achieve it."</p>
+                <span class="text-accent mt-2">- Yours truly</span>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <p class="text-lg text-textSecondary">"In this life, whatever is unique starts off as crazy. Then it becomes commendable."</p>
+                <span class="text-accent mt-2">- Yours truly</span>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <p class="text-lg text-textSecondary">"Move from Object-Oriented Programming(OOP) to People-Oriented Living(POL)."</p>
+                <span class="text-accent mt-2">- Yours truly</span>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <a href="#about" class="animate-bounce">
+            <i class="fas fa-chevron-down text-4xl text-white"></i>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 px-8 bg-secondary">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="section-title">About Me</h2>
+            <p class="text-lg text-textSecondary">
+              I'm a computer science student passionate about building efficient, scalable systems. I thrive on solving complex problems, and I'm currently focused on applying my skills in machine learning and data analysis to the world of quantitative finance. My goal is to bridge the gap between advanced technology and financial modeling.
+            </p>
+          </div>
+          <div>
+            <img src="/src/assets/portrait.png" alt="A portrait of me" class="about-me-image w-full rounded-2xl" />
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-20 px-8 bg-primary">
+        <div class="container mx-auto">
+          <h2 class="section-title">Milestones</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2020</div>
+              <div class="timeline-content">
+                <h3>First Hello, World program</h3>
+                <p>I taught myself how to code using python</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2020</div>
+              <div class="timeline-content">
+                <h3>Obtain my Matric</h3>
+                <p>I finished my matric with a Bachelors pass</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023 (Feb)</div>
+              <div class="timeline-content">
+                <h3>Enrolled for BSc Computer Science</h3>
+                <p>I enrolled at University of Johannesburg</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023 (Oct)</div>
+              <div class="timeline-content">
+                <h3>Ranked Top 10</h3>
+                <p>I was ranked in the top 10 in the academy</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024</div>
+              <div class="timeline-content">
+                <h3>Ranked Top 3 for Group Project</h3>
+                <p>My 2nd year group project was ranked in the top 3 in class</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2025 (Feb)</div>
+              <div class="timeline-content">
+                <h3>Assistant Job</h3>
+                <p>I started working as a teaching assistant for first-year computer science students</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2025 (Oct)</div>
+              <div class="timeline-content">
+                <h3>Ranked Top 20 for Group Project</h3>
+                <p>My 3rd year group project was ranked in the top 20 in class</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2025 (Dec)</div>
+              <div class="timeline-content">
+                <h3>Obtained my BSc Computer Science</h3>
+                <p>I completed my degree at the University of Johannesburg</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="principles" class="py-20 px-8 bg-secondary">
+        <div class="container mx-auto">
+          <h2 class="section-title">Principles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-4 text-left">Code Principles</h3>
+              <ul class="list-disc list-inside space-y-2 principle-list">
+                <li>Use of AI for productivity</li>
+                <li>Keep it simple, stupid (KISS)</li>
+                <li>Comment to help yourself first</li>
+                <li>Data is a currency, use it wisely</li>
+                <li>Logic is the foundation of programming</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-4 text-left">Life Principles</h3>
+              <ul class="list-disc list-inside space-y-2 principle-list">
+                <li>Love and loyalty</li>
+                <li>Life long learning</li>
+                <li>Justice and Fairness</li>
+                <li>Dedication and Commitment</li>
+                <li>Community and Collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--
+      <section id="certifications" class="py-20 px-8 bg-secondary">
+        <div class="container mx-auto">
+          <h2 class="section-title">Certifications</h2>
+          <ul class="flex flex-wrap justify-center gap-4">
+            <li class="certification-tag"><span>Google Cloud Certified: Associate Cloud Engineer</span></li>
+            <li class="certification-tag"><span>AWS Certified Cloud Practitioner</span></li>
+            <li class="certification-tag"><span>[Another Certification]</span></li>
+          </ul>
+        </div>
+      </section>
+-->
+
+      <section id="projects" class="py-20 px-8 bg-primary">
+        <div class="container mx-auto">
+          <h2 class="section-title">My Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <img src="/src/assets/project-1.png" alt="A project screenshot" class="project-image w-full aspect-video object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Art Auction</h3>
+                <p class="text-textSecondary mb-4">This is a platform that supports local artisans to establish their brand by allowing them to tell their story.</p>
+                <button class="btn-details">View Details</button>
+              </div>
+            </div>
+            <!-- Project Card 2 -->
+            <!-- <div class="project-card">
+              <img src="/src/assets/project.jpg" alt="A project screenshot" class="project-image w-full aspect-video object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Project Two</h3>
+                <p class="text-textSecondary mb-4">A brief but engaging description of the project.</p>
+                <button class="btn-details">View Details</button>
+              </div>
+            </div>
+             Project Card 3
+            <div class="project-card">
+              <img src="/src/assets/project.jpg" alt="A project screenshot" class="project-image w-full aspect-video object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Project Three</h3>
+                <p class="text-textSecondary mb-4">A brief but engaging description of the project.</p>
+                <button class="btn-details">View Details</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-20 px-8 bg-secondary">
+        <div class="container mx-auto">
+          <h2 class="section-title">Skills</h2>
+          <ul class="flex flex-wrap justify-center gap-4">
+            <li class="skill-tag"><span>C#</span></li>
+            <li class="skill-tag"><span>React</span></li>
+            <li class="skill-tag"><span>Node.js</span></li>
+            <li class="skill-tag"><span>Python</span></li>
+            <li class="skill-tag"><span>Java</span></li>
+            <li class="skill-tag"><span>SQL</span></li>
+            <li class="skill-tag"><span>Git</span></li>
+            <li class="skill-tag"><span>Docker</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="writing" class="py-20 px-8 bg-primary">
+        <div class="container mx-auto">
+          <h2 class="section-title">Blog</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="blog.html" target="_blank" rel="noopener noreferrer" class="writing-card">
+              <h3>Article Title 1: A Deep Dive into Project X</h3>
+              <p>A short preview of the article, explaining the key takeaways and what I learned...</p>
+              <span class="read-more">Read More &rarr;</span>
+            </a>
+            <a href="blog.html" target="_blank" rel="noopener noreferrer" class="writing-card">
+              <h3>Article Title 2: Thoughts on a New Paper</h3>
+              <p>Analyzing a recent academic paper on [topic] and its implications for the industry...</p>
+              <span class="read-more">Read More &rarr;</span>
+            </a>
+            <a href="blog.html" target="_blank" rel="noopener noreferrer" class="writing-card">
+              <h3>Article Title 3: Explaining a Complex Concept</h3>
+              <p>Breaking down [difficult_concept] in a way that is easy to understand and apply...</p>
+              <span class="read-more">Read More &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="py-20 px-8 bg-secondary text-center">
+        <div class="container mx-auto">
+          <h2 class="section-title">Resume</h2>
+          <a href="/src/assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-8 text-center text-textSecondary bg-primary">
+      <div class="container mx-auto">
+        <div class="flex justify-center space-x-8 mb-4">
+          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Lebone KM. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="project-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="bg-primary p-8 rounded-lg max-w-3xl w-full relative text-textPrimary">
+        <button id="close-modal" class="absolute top-4 right-4 text-textPrimary" aria-label="Close modal">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+        <p id="modal-description" class="mb-4"></p>
+        <div id="modal-tech-stack" class="mb-6 flex flex-wrap gap-2"></div>
+        <div id="modal-links" class="flex space-x-4"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

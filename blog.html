@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog Post - Lebone's Portfolio</title>
+        <link rel="stylesheet" href="/src/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+      </head>
+      <body class="bg-primary text-textPrimary font-mono">
+
+        <header class="fixed top-0 left-0 w-full z-50 px-8 py-4 transition-all duration-300">
+          <nav class="flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-accent">LK</a> <ul class="hidden md:flex space-x-8">
+              <li><a href="index.html#about" class="nav-link">About</a></li>
+              <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+              <li><a href="index.html#certifications" class="nav-link">Certifications</a></li>
+              <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+              <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+              <li><a href="index.html#writing" class="nav-link">Writing</a></li>
+              <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-textPrimary" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+              <svg id="x-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </nav>
+        </header>
+
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-40" role="dialog" aria-modal="true">
+          <ul class="flex flex-col items-center justify-center h-full space-y-8">
+            <li><a href="index.html#about" class="nav-link-mobile">About</a></li>
+            <li><a href="index.html#experience" class="nav-link-mobile">Experience</a></li>
+            <li><a href="index.html#certifications" class="nav-link-mobile">Certifications</a></li>
+            <li><a href="index.html#skills" class="nav-link-mobile">Skills</a></li>
+            <li><a href="index.html#projects" class="nav-link-mobile">Projects</a></li>
+            <li><a href="index.html#writing" class="nav-link-mobile">Writing</a></li>
+            <li><a href="index.html#contact" class="nav-link-mobile">Contact</a></li>
+          </ul>
+        </div>
+
+        <main style="padding-top: 128px;" class="bg-primary text-textPrimary">
+          <article class="container mx-auto max-w-3xl blog-article">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-accent">
+              From Ambiguous Text to Accurate Diagnosis: A Deep Dive into Building an AI-Powered Repair Assistant
+            </h1>
+            <p class="text-lg text-textSecondary mb-4"><strong>Abstract:</strong> 
+              The proliferation of consumer electronics and IoT devices has created a significant challenge in the repair and maintenance sector. Users often describe device failures in ambiguous, non-technical language, making automated diagnosis difficult. This article chronicles a project aimed at solving this problem by leveraging artificial intelligence...
+            </p>
+            <hr class="border-accent my-8"/>
+
+            <div class="blog-content space-y-6">
+
+              <h2 class="text-3xl font-bold pt-6 text-textPrimary">1. Introduction: The Problem of Ambiguous Fault Reports</h2>
+              <p>
+                Anyone who has experienced a device malfunction is familiar with the challenge of describing the problem. A user might report that their laptop is "making a weird noise" or their phone screen is "flickering".[1] For a human technician, these descriptions are a starting point for a series of diagnostic questions. For an automated system, they are a significant hurdle.
+              </p>
+              <p>
+                User-generated fault reports are inherently ambiguous, unstructured, incomplete, and lack technical precision.[2, 1] This "noisy" text is difficult for traditional software to parse, making it a challenging classification problem...
+              </p>
+
+              <h2 class="text-3xl font-bold pt-6 text-textPrimary">2. The Research Breakthrough: Validating the Approach with LLMs</h2>
+              <p>
+                The initial phase of the project involved exploring whether modern AI, specifically Large Language Models (LLMs), could be the key to understanding this ambiguous text. This exploration led to a pivotal discovery: a research paper titled, <strong>"Evaluating LLMs and Prompting Strategies for Automated Hardware Diagnosis from Textual User-Reports"</strong>.[1]
+              </p>
+
+              <h3 class="text-2xl font-bold pt-4 text-textPrimary">2.1 Key Findings from the Study</h3>
+              <p>
+                The researchers conducted an extensive benchmark of 27 open-source LLMs, testing their ability to diagnose faults based on a specialized dataset called <strong>`FACTO`</strong>.[3, 4, 5, 6, 1] The `FACTO` dataset is a collection of 853 user-generated reports, each cleanly labeled with the specific faulty hardware component (e.g., "video card," "memory," "network").[3, 4, 1]
+              </p>
+              <p>
+                The study's most significant finding was the identification of a model that offered an exceptional balance between performance and efficiency.
+              </p>
+              <blockquote>
+                <p>
+                  <strong>`gemma-2-2b-it` achieved an impressive F1-score of 0.7269 with only 2 billion parameters.</strong> This demonstrated that a lightweight, efficient model could achieve high accuracy on this specialized task, making it a feasible and cost-effective choice for a real-world application.[1]
+                </p>
+              </blockquote>
+              <p>
+                This discovery was the cornerstone of our implementation plan. It proved that we didn't need a massive, resource-intensive model to build a viable product.
+              </p>
+
+              <h2 class="text-3xl font-bold pt-6 text-textPrimary">3. The Implementation Plan: Building the V1.0 Diagnostic Engine</h2>
+              <p>
+                Armed with this validation, we formulated a detailed technical roadmap for our Minimum Viable Product (MVP). The plan focuses on building a robust diagnostic model by combining the strengths of multiple datasets and leveraging state-of-the-art training techniques.
+              </p>
+
+              <h3 class="text-2xl font-bold pt-4 text-textPrimary">3.1 The Data Strategy: A Tale of Two Datasets</h3>
+              <p>
+                While the `FACTO` dataset is perfect for its high-quality labels, its small size is a limitation. To build a model that can understand the vast diversity of user language, we needed more data. This led us to the <strong>Open Repair Alliance (ORA) dataset</strong>.[7, 8, 9, 10, 11]
+              </p>
+              <p>
+                Our solution is to use a hybrid approach:
+              </p>
+              <ul>
+                <li><strong>Ground Truth:</strong> Use the `FACTO` dataset as our accurately labeled "ground truth."</li>
+                <li><strong>Linguistic Enrichment:</strong> Use the text from the ORA dataset's `problem` column as a source for <strong>data augmentation</strong>.</li>
+              </ul>
+
+              <h3 class="text-2xl font-bold pt-4 text-textPrimary">3.2 Data Augmentation: Making a Small Dataset Mighty</h3>
+              <p>
+                Data augmentation is a set of techniques used to increase the size and diversity of a training dataset... Key techniques include:
+              </p>
+              <ul>
+                <li><strong>Contextual Word Replacement:</strong> Replacing words in `FACTO` sentences with contextually similar words found in the ORA dataset...</li>
+                <li><strong>Back-Translation:</strong> Translating a sentence to another language and then back to English...</li>
+              </ul>
+
+              <h3 class="text-2xl font-bold pt-4 text-textPrimary">3.3 Model Training: Fine-Tuning `gemma-2-2b-it`</h3>
+              <p>
+                With our augmented dataset, the final step is to <strong>fine-tune</strong> the pre-trained `gemma-2-2b-it` model... we will use <strong>Parameter-Efficient Fine-Tuning (PEFT)</strong> techniques like <strong>QLoRA (Quantized Low-Rank Adaptation)</strong>.
+              </p>
+
+              <h3 class="text-2xl font-bold pt-4 text-textPrimary">3.4 Model Inference: From Text to Diagnosis</h3>
+              <p>
+                Once fine-tuned, the model will be deployed as a secure API. The inference process will be straightforward...
+              </p>
+
+              <h2 class="text-3xl font-bold pt-6 text-textPrimary">4. The Proposed Solution: V1.0 "The Diagnostic Engine"</h2>
+              <p>
+                The culmination of this work is a focused MVP designed to prove the core technology and begin a virtuous cycle of data collection.
+              </p>
+              <ul>
+                <li><strong>The Product:</strong> A simple web application where a user selects their device...</li>
+                <li><strong>The Experience:</strong> In seconds, the user receives a clear, concise diagnostic report.</li>
+                <li><strong>The Business Model:</strong> A simple pay-per-diagnosis model will be used...</li>
+              </ul>
+
+              <h2 class="text-3xl font-bold pt-6 text-textPrimary">5. Conclusion and Future Work</h2>
+              <p>
+                The journey from a broad concept to a concrete, technically validated plan highlights the power of leveraging academic findings to de-risk and accelerate a startup project. The discovery that a lightweight model like `gemma-2-2b-it` can perform this complex classification task with high accuracy was a critical turning point.
+              </p>
+            </div>
+          </article>
+        </main>
+
+        <footer class="py-8 text-center text-textSecondary bg-secondary">
+          <div class="container mx-auto">
+            <div class="flex justify-center space-x-8 mb-4">
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Lebone. All rights reserved.</p>
+          </div>
+        </footer>
+
+        <script type="module" src="/src/main.js"></script>
+      </body>
+    </html>

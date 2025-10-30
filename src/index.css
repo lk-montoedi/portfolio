@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-textPrimary font-mono;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-yellow-400;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-lg font-medium text-textPrimary relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .nav-link-mobile {
+    @apply text-2xl font-medium text-textPrimary;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-primary hover:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-center mb-12 text-textPrimary underline;
+    text-decoration-color: #FFD700;
+    text-underline-offset: 9px;
+  }
+
+  .skill-tag {
+    @apply bg-secondary text-textPrimary px-4 py-2 rounded-md border border-accent/20 hover:border-accent hover:shadow-lg hover:shadow-accent/20 transition-all duration-300;
+  }
+
+  /*
+  .certification-tag {
+    @apply bg-primary text-textPrimary px-4 py-2 rounded-md border border-accent/20 hover:border-accent hover:shadow-lg hover:shadow-accent/20 transition-all duration-300 text-center;
+  }
+  */
+
+  .project-card {
+    @apply bg-secondary rounded-lg overflow-hidden shadow-lg hover:shadow-xl hover:shadow-accent/20 transition-shadow duration-300 transform hover:-translate-y-1 border border-accent/20;
+  }
+
+  .project-image {
+    @apply aspect-[4/3] object-cover;
+  }
+
+  .about-me-image {
+    @apply rounded-2xl max-w-sm mx-auto;
+  }
+
+  .btn-details {
+    @apply text-accent font-bold hover:underline;
+  }
+
+  .writing-card {
+    @apply block bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 transform hover:-translate-y-1 border border-accent/20;
+  }
+  .writing-card h3 {
+    @apply text-xl font-bold mb-2 text-textPrimary;
+  }
+  .writing-card p {
+    @apply text-textSecondary mb-4;
+  }
+  .writing-card .read-more {
+    @apply text-accent font-bold hover:underline;
+  }
+
+  .form-group {
+    @apply relative mb-8;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    @apply w-full bg-secondary border border-accent/20 rounded-lg p-3 focus:outline-none focus:border-accent transition-colors duration-300;
+  }
+
+  .form-group label {
+    @apply absolute left-3 top-3 transition-all duration-300 pointer-events-none text-textSecondary;
+  }
+
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    @apply top-[-12px] left-2 text-sm text-accent bg-secondary px-1;
+  }
+
+  .social-icon {
+    @apply text-3xl text-textSecondary hover:text-accent transition-colors duration-300;
+  }
+
+
+  .timeline {
+    @apply relative border-l-2 border-accent/20 ml-6;
+  }
+
+  .timeline-item {
+    @apply relative mb-10 ml-6;
+  }
+
+  .timeline-dot {
+    @apply absolute -left-8 w-4 h-4 bg-accent rounded-full border-4 border-primary;
+  }
+
+  .timeline-date {
+    @apply text-sm text-textSecondary;
+  }
+
+  .timeline-content {
+    @apply bg-secondary p-4 rounded-lg;
+  }
+
+  .timeline-content h3 {
+    @apply text-xl font-bold text-textPrimary;
+  }
+
+  .timeline-content p {
+    @apply text-textSecondary;
+  }
+
+  .timeline-item:hover .timeline-dot {
+    box-shadow: 0 0 10px #FFD700;
+  }
+
+  .timeline-item:hover .timeline-content {
+    @apply transform -translate-y-1;
+  }
+
+  .principle-list li::marker {
+    color: #FFD700;
+  }
+
+  .highlight {
+    @apply relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[2px] after:bg-accent;
+  }
+
+  .quote-swiper {
+    @apply w-full mt-20;
+  }
+
+  .quote-swiper .swiper-slide {
+    @apply bg-secondary/80 border border-accent/20 rounded-lg p-6 flex flex-col justify-center items-center text-center h-auto;
+    /* Adds a glassmorphism feel */
+    backdrop-filter: blur(5px);
+  }
+
+  .quote-swiper .swiper-pagination-bullet-active {
+    @apply bg-accent;
+  }
+
+  #project-modal {
+    backdrop-filter: blur(5px);
+  }
+
+  .page-container {
+    @apply pt-32 px-8 pb-20; /* pt-32 (8rem) pushes content below the fixed header */
+  }
+
+  /* START: REPLACE this entire block in @layer components */
+
+.blog-content p {
+  @apply text-lg text-textSecondary leading-relaxed mb-10;
+}
+
+/* Make all bold text use the accent color */
+.blog-content p strong,
+.blog-content li strong {
+  @apply text-accent font-bold;
+}
+
+/* Make H2 (section) headings use a thick accent border */
+.blog-content h2 {
+  @apply text-3xl font-bold border-t-2 border-accent pt-6 mt-20 text-textPrimary; 
+}
+
+/* Make H3 (sub) headings yellow */
+.blog-content h3 {
+  @apply text-2xl font-bold pt-4 mt-16 text-accent;
+}
+
+/* Make list bullets yellow */
+.blog-content ul {
+  @apply list-disc list-inside text-lg text-textSecondary pl-4 my-6 space-y-2;
+}
+.blog-content ul li::marker {
+   @apply text-accent;
+}
+
+/* Keep the blockquote styling (it's already good) */
+.blog-content blockquote {
+  @apply border-l-4 border-accent bg-secondary p-6 rounded-r-lg my-6;
+}
+.blog-content blockquote p {
+   @apply font-bold text-lg text-textPrimary leading-relaxed;
+}
+
+/* END: REPLACE block */
+
+.blog-article {
+  /* This overrides the font-mono from the body */
+  font-family: 'Roboto', sans-serif;
+}
+}
