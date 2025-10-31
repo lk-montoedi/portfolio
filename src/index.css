@@ -129,6 +129,18 @@
     @apply text-3xl text-textSecondary hover:text-accent transition-colors duration-300;
   }
 
+  .social-icon-floating {
+    @apply text-3xl text-textPrimary hover:text-accent transition-colors duration-300;
+  }
+
+  #floating-socials {
+    @apply fixed bottom-8 right-8 z-50;
+  }
+
+  #floating-socials .flex {
+    @apply flex-col space-y-4;
+  }
+
 
   .timeline {
     @apply relative border-l-2 border-accent/20 ml-6;

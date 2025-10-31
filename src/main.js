@@ -112,6 +112,26 @@ const projects = [
       live: "#",
     },
   },
+  {
+    title: "Eskom Expo Hub",
+    description:
+      "This project is a comprehensive, full-stack platform designed to manage the entire lifecycle of the Eskom Expo science fair. It features a React-based web dashboard for administrators to create events and manage users, a portal for learners to register and submit projects, and a dedicated React Native mobile app for judges. On event day, judges use the mobile app to view assigned projects, submit scores on digital marksheets, and handle scoring conflicts, all while a Node.js and WebSocket backend provides real-time progress updates to the admin dashboard.",
+    techStack: ["React", "Node.js", "Express.js", "Docker", "PostgreSQL", "React Native"],
+    links: {
+      github: "https://github.com/lk-montoedi/eskom-expo-app",
+      live: "#",
+    },
+  },
+  {
+    title: "Web Gemini Summarizer",
+    description:
+      "This project is a sophisticated, full-stack application demonstrating a modern, end-to-end AI workflow. It provides users with on-demand text summarization by interfacing directly with Google's Gemini Pro model. The entire system is built on a secure, token-based architecture, leveraging Firebase Authentication for robust Google Sign-In. On the frontend, a dynamic, chat-style interface built with client-side JavaScript provides an asynchronous, single-page-application feel. This front-end securely communicates with a Node.js backend, which verifies user identity via JWTs before processing requests and persisting all user-generated summaries to a Firestore database.",
+    techStack: ["EJS/CSS", "JS", "Node.js", "Express.js", "Firebase", "Gemini API"],
+    links: {
+      github: "https://github.com/lk-montoedi/web-gemini-summarizer",
+      live: "#",
+    },
+  },
 ];
 
 projectCards.forEach((card, index) => {
@@ -124,7 +144,6 @@ projectCards.forEach((card, index) => {
       .join("");
     modalLinks.innerHTML = `
       <a href="${project.links.github}" target="_blank" class="btn btn-secondary">GitHub</a>
-      <a href="${project.links.live}" target="_blank" class="btn btn-primary">Live Demo</a>
     `;
     projectModal.classList.remove("hidden");
   });
