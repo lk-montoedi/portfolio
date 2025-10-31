@@ -106,7 +106,7 @@ const projects = [
     title: "Artis At Auction",
     description:
       "With the rise of ultra-fast fashion retailers like Shein and Temu, local brand owners and artisans are struggling to grow their markets both locally and internationally. Competing with such platforms’ low prices leaves little to no profit margin for small creators. The art and fashion industry remains heavily gatekept, with high startup costs and limited networks making it hard for new artisans to break through. As a result, many talented creators never get the chance to showcase their work. Artis at Auction bridges this gap by connecting artisans and art lovers — allowing creators to upload and share their artwork, tell the story behind their inspiration, and let buyers bid for their pieces.",
-    techStack: ["HTML/CSS", "ASP.NET", "SQL Server"],
+    techStack: ["HTML/CSS", "C#", "ASP.NET", "SQL Server"],
     links: {
       github: "https://github.com/lk-montoedi/Auction-Website",
       live: "#",

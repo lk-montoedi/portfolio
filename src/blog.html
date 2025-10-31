@@ -62,27 +62,27 @@
 
               <h2 class="text-3xl font-bold pt-6 text-textPrimary">1. Introduction: The Problem of Ambiguous Fault Reports</h2>
               <p>
-                Anyone who has experienced a device malfunction is familiar with the challenge of describing the problem. A user might report that their laptop is "making a weird noise" or their phone screen is "flickering".[1] For a human technician, these descriptions are a starting point for a series of diagnostic questions. For an automated system, they are a significant hurdle.
+                Anyone who has experienced a device malfunction is familiar with the challenge of describing the problem. A user might report that their laptop is "making a weird noise" or their phone screen is "flickering". For a human technician, these descriptions are a starting point for a series of diagnostic questions. For an automated system, they are a significant hurdle.
               </p>
               <p>
-                User-generated fault reports are inherently ambiguous, unstructured, incomplete, and lack technical precision.[2, 1] This "noisy" text is difficult for traditional software to parse, making it a challenging classification problem...
+                User-generated fault reports are inherently ambiguous, unstructured, incomplete, and lack technical precision. This "noisy" text is difficult for traditional software to parse, making it a challenging classification problem...
               </p>
 
               <h2 class="text-3xl font-bold pt-6 text-textPrimary">2. The Research Breakthrough: Validating the Approach with LLMs</h2>
               <p>
-                The initial phase of the project involved exploring whether modern AI, specifically Large Language Models (LLMs), could be the key to understanding this ambiguous text. This exploration led to a pivotal discovery: a research paper titled, <strong>"Evaluating LLMs and Prompting Strategies for Automated Hardware Diagnosis from Textual User-Reports"</strong>.[1]
+                The initial phase of the project involved exploring whether modern AI, specifically Large Language Models (LLMs), could be the key to understanding this ambiguous text. This exploration led to a pivotal discovery: a research paper titled, <strong>"Evaluating LLMs and Prompting Strategies for Automated Hardware Diagnosis from Textual User-Reports"</strong>.
               </p>
 
               <h3 class="text-2xl font-bold pt-4 text-textPrimary">2.1 Key Findings from the Study</h3>
               <p>
-                The researchers conducted an extensive benchmark of 27 open-source LLMs, testing their ability to diagnose faults based on a specialized dataset called <strong>`FACTO`</strong>.[3, 4, 5, 6, 1] The `FACTO` dataset is a collection of 853 user-generated reports, each cleanly labeled with the specific faulty hardware component (e.g., "video card," "memory," "network").[3, 4, 1]
+                The researchers conducted an extensive benchmark of 27 open-source LLMs, testing their ability to diagnose faults based on a specialized dataset called <strong>`FACTO`</strong>. The `FACTO` dataset is a collection of 853 user-generated reports, each cleanly labeled with the specific faulty hardware component (e.g., "video card," "memory," "network").
               </p>
               <p>
                 The study's most significant finding was the identification of a model that offered an exceptional balance between performance and efficiency.
               </p>
               <blockquote>
                 <p>
-                  <strong>`gemma-2-2b-it` achieved an impressive F1-score of 0.7269 with only 2 billion parameters.</strong> This demonstrated that a lightweight, efficient model could achieve high accuracy on this specialized task, making it a feasible and cost-effective choice for a real-world application.[1]
+                  <strong>`gemma-2-2b-it` achieved an impressive F1-score of 0.7269 with only 2 billion parameters.</strong> This demonstrated that a lightweight, efficient model could achieve high accuracy on this specialized task, making it a feasible and cost-effective choice for a real-world application.
                 </p>
               </blockquote>
               <p>
@@ -96,7 +96,7 @@
 
               <h3 class="text-2xl font-bold pt-4 text-textPrimary">3.1 The Data Strategy: A Tale of Two Datasets</h3>
               <p>
-                While the `FACTO` dataset is perfect for its high-quality labels, its small size is a limitation. To build a model that can understand the vast diversity of user language, we needed more data. This led us to the <strong>Open Repair Alliance (ORA) dataset</strong>.[7, 8, 9, 10, 11]
+                While the `FACTO` dataset is perfect for its high-quality labels, its small size is a limitation. To build a model that can understand the vast diversity of user language, we needed more data. This led us to the <strong>Open Repair Alliance (ORA) dataset</strong>.
               </p>
               <p>
                 Our solution is to use a hybrid approach:
@@ -146,8 +146,8 @@
         <footer class="py-8 text-center text-textSecondary bg-secondary">
           <div class="container mx-auto">
             <div class="flex justify-center space-x-8 mb-4">
-              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/lk-montoedi" class="social-icon"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/lebone-montoedi-56b9932a3" class="social-icon"><i class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2025 Lebone. All rights reserved.</p>
           </div>
